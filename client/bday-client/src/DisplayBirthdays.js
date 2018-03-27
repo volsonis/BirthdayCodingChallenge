@@ -5,7 +5,8 @@ import './DisplayBirthdays.css';
 class DisplayBirthdays extends Component {
   constructor() {
     super();
-    this.state = { birthdays: [] };
+    this.state = { birthdays: [],
+      todaysBirthdays: [] };
 
   }
 
@@ -26,13 +27,27 @@ class DisplayBirthdays extends Component {
           return (getBirthdayElement(birthday))
         })
 
+        let todaysBirthdays = data.filter((birthday) => {
+          return (isBirthdayToday(birthday))
+        }).map((birthday) => {
+          return (getBirthdayElement(birthday))
+        })
+
         this.setState({birthdays: birthdays});
+        this.setState({todaysBirthdays: todaysBirthdays});
+        
         console.log("state", this.state.birthdays);
       })
   }
 
   render() {
-    return (<div className="birthdays">{this.state.birthdays}</div>);
+    return (
+    <div>
+      <h1>Todays Birthdays</h1>
+      <div className="birthdays">{this.state.todaysBirthdays}</div>
+      <h1>All Birthdays</h1>
+      <div className="birthdays">{this.state.birthdays}</div> 
+    </div>);
   }
   
 }
@@ -45,6 +60,13 @@ function getBirthdayElement(birthday) {
     </div>
   )
   return element;
+}
+
+function isBirthdayToday(birthday) {
+  let today = new Date()
+  let date = new Date(birthday.birthday)
+  
+  return today.getMonth() === date.getMonth() && today.getDate() === date.getDate()
 }
 
 export default DisplayBirthdays;
