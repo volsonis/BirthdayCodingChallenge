@@ -92,7 +92,7 @@ function isBirthdayToday(birthday) {
 }
 
 function isBirthdayInNextTwoWeeks(birthday) {
-  // make today equal start of day
+  // make today equal start of day so the compare function
   let today = new Date()
   today.setHours(0);
   today.setMinutes(0);
@@ -130,3 +130,5 @@ function ageOf(birthdayJson) {
 }
 
 export default DisplayBirthdays;
+
+module.exports = isBirthdayToday;
