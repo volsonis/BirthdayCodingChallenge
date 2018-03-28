@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3001;
 
-// enable all CORS
+// enable all CORS, definitely not recommended, but fine for this coding challenge
 app.use(cors())
 
 // body parser, so we can handle incoming request bodies
