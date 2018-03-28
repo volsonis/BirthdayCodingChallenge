@@ -52,11 +52,11 @@ class DisplayBirthdays extends Component {
   render() {
     return (
     <div>
-      <h1>Todays Birthdays</h1>
+      <h2>Todays Birthdays</h2>
       <div className="birthdays">{this.state.todaysBirthdays}</div>
-      <h1>Upcoming Birthdays</h1>
+      <h2>Upcoming Birthdays</h2>
       <div className="birthdays">{this.state.birthdaysInTwoWeeks}</div> 
-      <h1>All Birthdays</h1>
+      <h2>All Birthdays</h2>
       <div className="birthdays">{this.state.birthdays}</div> 
     </div>);
   }
@@ -84,7 +84,7 @@ function getBirthdayElementWithAge(birthday) {
   return element;
 }
 
-function isBirthdayToday(birthday) {
+export function isBirthdayToday(birthday) {
   let today = new Date()
   let date = new Date(birthday.birthday)
   
@@ -130,5 +130,3 @@ function ageOf(birthdayJson) {
 }
 
 export default DisplayBirthdays;
-
-module.exports = isBirthdayToday;

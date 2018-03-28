@@ -1,10 +1,9 @@
-.App {
-  text-align: center;
+.birthdays {
+  text-indent: 20px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+h2 {
+  text-indent: 10px;
 }
 
 .App-header {
