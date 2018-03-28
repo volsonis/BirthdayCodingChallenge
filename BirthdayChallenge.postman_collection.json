@@ -1,0 +1,100 @@
+{
+	"id": "ee0b7228-a907-e91e-b048-3c1b22ef839b",
+	"name": "BirthdayChallenge",
+	"description": "",
+	"order": [
+		"70b62647-b4a8-53f7-c683-7952b210263b",
+		"b1c5b67b-3e8f-b596-ef73-e120af6ec673",
+		"93f63aa0-5865-1fb2-0d41-a86f85b83f52"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1522147985313,
+	"owner": 0,
+	"public": false,
+	"events": [],
+	"variables": [],
+	"auth": null,
+	"requests": [
+		{
+			"id": "70b62647-b4a8-53f7-c683-7952b210263b",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3001/birthdays",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"auth": null,
+			"time": 1522230541620,
+			"name": "List all",
+			"description": "",
+			"collectionId": "ee0b7228-a907-e91e-b048-3c1b22ef839b",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "93f63aa0-5865-1fb2-0d41-a86f85b83f52",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3001/birthdays",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1522230545711,
+			"name": "Delete Bday",
+			"description": "",
+			"collectionId": "ee0b7228-a907-e91e-b048-3c1b22ef839b",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{ \"name\": \"Stefan Les\" }"
+		},
+		{
+			"id": "b1c5b67b-3e8f-b596-ef73-e120af6ec673",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3001/birthdays",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1522230532521,
+			"name": "Add Bday",
+			"description": "",
+			"collectionId": "ee0b7228-a907-e91e-b048-3c1b22ef839b",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "\n   {\n        \"name\": \"Stefan Orange\",\n        \"birthday\": \"1993-03-28\"\n    }\n"
+		}
+	]
+}

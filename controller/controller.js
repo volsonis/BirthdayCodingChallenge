@@ -13,7 +13,7 @@ let data = [
   }
 ];
 
-module.exports.list_all_bdays = function(req, res) {
+exports.list_all_bdays = function(req, res) {
   console.log("GET")
   res.json(data);
 }
